@@ -10,14 +10,12 @@
 # reformatted data. If the second argument is "print" it will just     #
 # create a file named tmp(current time) and then print the data to     #
 # stdout. This is useful if you call this script from within the       #
-# Mathematica notebook.
+# Mathematica notebook.                                                #
 #                                                                      #
 # Known issues:                                                        #
-# This will not work (as currently written) if the band energies       #
-# extends past one line. It shouldn't be too hard to fix (might need   #
-# to implement some state variables or something), but I haven't done  #
-# it yet.                                                              #
-# Also, this is very dependent on an exact output form from abinit,    #
+# None                                                                 #
+#                                                                      #
+# This is very dependent on an exact output form from abinit,          #
 # but I somewhat doubt that will change significantly. I am basing it  #
 # on my output from abinit 7.10.4 I believe.                           #
 #                                                                      #
@@ -73,6 +71,7 @@ if os.path.exists(band_s_out):
 if band_s_out == "print":
     band_s_out = 'tmp' + nowtime
 
+
 # Open the output file to write to
 with open(band_s_out, 'w') as out_file:
     # List opening character for Mathematica:
@@ -86,7 +85,7 @@ with open(band_s_out, 'w') as out_file:
             continue
         if line.strip().startswith('kpt#'):
             if i != 1:
-                out_file.write(',')
+                out_file.write('}},')
             # Make the line into a list of elements of the line
             # separated by spaces. Uses RegEx. Don't remember this
             # usage/language specifically. Just Google it.
@@ -95,7 +94,7 @@ with open(band_s_out, 'w') as out_file:
             k_point_coord = '{{' + \
               linelist[7] + ',' + \
               linelist[8] + ',' + \
-              linelist[9] + '},'
+              linelist[9] + '},{'
             out_file.write(k_point_coord)
             continue
         # make the line into a list split by spaces
@@ -107,14 +106,11 @@ with open(band_s_out, 'w') as out_file:
         # I could catch that, but I'm not certain what I would do with
         # the line anyway. I think I want the exception raised.
         float(linelist[0])
-        ee_output = '{'
         # Join eigenenergies into comma separated string list and append
         # to the line to be outputted:
-        ee_output += ','.join(linelist)
-        ee_output += '}}'
-        out_file.write(ee_output)
+        out_file.write(','.join(linelist))
         continue
-    out_file.write('}')
+    out_file.write('}}}')
 
 # If "print" was given earlier, now want to print the output to stdout:
 if band_s_out.startswith('tmp'):
