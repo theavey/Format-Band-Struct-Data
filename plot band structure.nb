@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13092,        307]
-NotebookOptionsPosition[     12503,        281]
-NotebookOutlinePosition[     12858,        297]
-CellTagsIndexPosition[     12815,        294]
+NotebookDataLength[     13404,        314]
+NotebookOptionsPosition[     12817,        288]
+NotebookOutlinePosition[     13170,        304]
+CellTagsIndexPosition[     13127,        301]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,7 +69,7 @@ Methods/abinit/Si\"\>"], "Output",
  CellChangeTimes->{
   3.637331886659339*^9, 3.637331982534849*^9, {3.637332062985106*^9, 
    3.637332079071954*^9}, {3.637332600874264*^9, 3.637332623476576*^9}, 
-   3.637332783259273*^9, 3.637335391219398*^9}]
+   3.637332783259273*^9, 3.637335391219398*^9, 3.637594481957885*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -97,7 +97,11 @@ Cell[BoxData[
      RowBox[{"\"\<\>\"", ",", "\"\<Energy / eV\>\""}], "}"}]}], ",", 
    RowBox[{"FrameTicks", "\[Rule]", 
     RowBox[{"{", 
-     RowBox[{"False", ",", "True", ",", "False", ",", "False"}], "}"}]}], ",", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"True", ",", "False"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"False", ",", "False"}], "}"}]}], "}"}]}], ",", 
    RowBox[{"PlotStyle", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -111,7 +115,8 @@ Cell[BoxData[
   3.63733549496903*^9}, {3.637335539027052*^9, 3.637335681308494*^9}, {
   3.637336064966415*^9, 3.637336110714191*^9}, {3.637336192689641*^9, 
   3.637336194272971*^9}, {3.6373362506351957`*^9, 3.637336332548654*^9}, {
-  3.637336528720504*^9, 3.637336546019878*^9}}],
+  3.637336528720504*^9, 3.637336546019878*^9}, {3.637594502436634*^9, 
+  3.637594503137206*^9}, {3.637594533243393*^9, 3.63759455066848*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {{}, {}, 
@@ -224,7 +229,7 @@ rkYbw/zv6JDm2TArig0m7+iQID9316efalB5J4cjr3+x7l4I5Tc4OTxVv2on
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
   AxesLabel->{None, None},
-  AxesOrigin->{0, 0},
+  AxesOrigin->{1.195, 0},
   DisplayFunction->Identity,
   Frame->{{True, True}, {True, True}},
   FrameLabel->{{
@@ -246,7 +251,9 @@ rkYbw/zv6JDm2TArig0m7+iQID9316efalB5J4cjr3+x7l4I5Tc4OTxVv2on
    3.6373353961458807`*^9, 3.637335450072261*^9}, {3.637335488395626*^9, 
    3.637335495694562*^9}, {3.63733555109654*^9, 3.63733563725375*^9}, {
    3.637335668073894*^9, 3.637335681597814*^9}, 3.6373361000640583`*^9, 
-   3.637336260020743*^9, {3.63733629354207*^9, 3.63733633399561*^9}}]
+   3.637336260020743*^9, {3.63733629354207*^9, 3.63733633399561*^9}, {
+   3.637594487745584*^9, 3.637594504520752*^9}, {3.6375945414517193`*^9, 
+   3.6375945513439074`*^9}}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -281,8 +288,8 @@ Cell[BoxData["\<\"Si_band_struct.eps\"\>"], "Output",
 },
 WindowSize->{808, 713},
 WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
-2014)",
+FrontEndVersion->"10.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 23, \
+2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -298,16 +305,16 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 1937, 42, 148, "Input"],
-Cell[2520, 66, 310, 5, 28, "Output"]
+Cell[2520, 66, 332, 5, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2867, 76, 1540, 37, 82, "Input"],
-Cell[4410, 115, 6927, 133, 233, "Output"]
+Cell[2889, 76, 1724, 42, 99, "Input"],
+Cell[4616, 120, 7035, 135, 267, "Output"]
 }, Open  ]],
-Cell[11352, 251, 92, 1, 28, "Input"],
+Cell[11666, 258, 92, 1, 28, "Input"],
 Cell[CellGroupData[{
-Cell[11469, 256, 920, 19, 97, "Input"],
-Cell[12392, 277, 95, 1, 28, "Output"]
+Cell[11783, 263, 920, 19, 97, "Input"],
+Cell[12706, 284, 95, 1, 28, "Output"]
 }, Open  ]]
 }
 ]
